@@ -12,7 +12,7 @@ export default defineConfig({
     pool: 'threads',
     coverage: {
       provider: 'v8',
-      reporter:,
+      reporter:
     },
   },
   define: {
