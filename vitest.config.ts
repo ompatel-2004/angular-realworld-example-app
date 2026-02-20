@@ -12,8 +12,12 @@ export default defineConfig({
     pool: 'threads',
     coverage: {
       provider: 'v8',
-      reporter: ['text', 'json', 'html'],
+      // 'lcov' is required for SonarQube to read the coverage data
+      reporter:,
+      // Optional: specifies the directory name
+      reportsDirectory: './coverage',
     },
+
   },
   define: {
     ngDevMode: true,
